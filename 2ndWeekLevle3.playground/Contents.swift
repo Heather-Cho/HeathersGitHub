@@ -1,13 +1,43 @@
 
 
 
-//level 03 제출
+//level 03 case 01 사칙연산 클래스를 프로퍼티로 사용.
 
 class Calculator {
     func calculate(_ operatorType: String,_ firstNumber1: Int,_ secondNumber1: Int)  -> Double {
         let oper = operatorType
         let fn = firstNumber1
         let sn = secondNumber1
+        
+        class AddOperation {
+                func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
+                    return Double(firstNumber + secondNumber)
+                }
+            }
+        
+        class SubstractOperation {
+            func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
+                return Double(firstNumber - secondNumber)
+            }
+        }
+        
+        class MultiplyOperation{
+            func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
+                return Double(firstNumber * secondNumber)
+            }
+        }
+        
+        class DivideOperation{
+            func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
+                return Double(firstNumber / secondNumber)
+            }
+        }
+        
+        //상수 선언
+        let addOperation = AddOperation()
+        let substractOperation = SubstractOperation()
+        let multiplyOperation = MultiplyOperation()
+        let divideOperation = DivideOperation()
         
         if oper == "+" {return addOperation.operation(fn, sn)}
         else if oper == "-" {return substractOperation.operation(fn, sn)}
@@ -17,33 +47,8 @@ class Calculator {
     }
 }
 
-class AddOperation:Calculator{
-        func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
-            return Double(firstNumber + secondNumber)
-        }
-    }
-class SubstractOperation:Calculator{
-    func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
-        return Double(firstNumber - secondNumber)
-    }
-}
-class MultiplyOperation:Calculator{
-    func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
-        return Double(firstNumber * secondNumber)
-    }
-}
-class DivideOperation:Calculator{
-    func operation (_ firstNumber: Int,_ secondNumber: Int)  -> Double {
-        return Double(firstNumber / secondNumber)
-    }
-}
-    
-let addOperation = AddOperation()
-let substractOperation = SubstractOperation()
-let multiplyOperation = MultiplyOperation()
-let divideOperation = DivideOperation()
 let calculator = Calculator()
-
+    
 let addResult = calculator.calculate("+", 10, 20)
 let subResult = calculator.calculate("-", 10, 20)
 let mulResult = calculator.calculate("*", 10, 20)
@@ -51,9 +56,8 @@ let divResult = calculator.calculate("/", 10, 20)
 
 
 
-//오답노트
 
-/* level 3 과제 (답은 맞게 나오지만 함수사용X,클래스 상속X)
+/* level 03 case 02 함수사용x
 
  var firstNumber = 7
  var secondNumber = 3

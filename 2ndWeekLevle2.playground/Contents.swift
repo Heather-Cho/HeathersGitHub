@@ -1,7 +1,7 @@
 
 
 
-//level 02 제출
+//level 02 case 01
 
 class Calculator {
     func calculate(_ operatorType: String,_ firstNumber: Int,_ secondNumber: Int)  -> Double {
@@ -33,34 +33,11 @@ class Calculator {
 
 
 
-//오답노트
-
-/* 2번째 시도
-class Calculator {
-    func calculate(operator1: String, firstNumber: Int, secondNumber: Int)  -> Double {
-        var oper = String(operator1)
-        var add = firstNumber + secondNumber
-        var sub = firstNumber - secondNumber
-        var mul = firstNumber * secondNumber
-        var div = firstNumber / secondNumber
-        var rem = firstNumber % secondNumber
-
-        if oper == "+" {Double(add)}
-        else if oper == "-" {return Double(sub)}
-        else if oper == "*" {return Double(mul)}
-        else if oper == "/" {return Double(div)}
-        else if oper == "%" {return Double(div)}
-        }
-}
-
- let calculator = Calculator()
-
- let addResult = calculator.calculate(operator1: "+", firstNumber: 10, secondNumber: 20)
- let subResult = calculator.calculate(operator1: "-", firstNumber: 10, secondNumber: 20)
-*/
 
 
-/* 1번째 시도
+
+/*level 02 case 02
+
  var firstNumber = 7
  var secondNumber = 3
 
